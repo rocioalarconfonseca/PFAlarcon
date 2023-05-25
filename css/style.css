@@ -1,18 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
-
-* {
+*{
     margin: 0;
     padding: 0;
     font-family: "Be Vietnam Pro", sans-serif;
 }
-
 body {
     background-color: rgba(252, 217, 237, 0.891);
 }
+.row{
+    margin:0;
+}
+.btn-primary{
+    background-color: rgb(163, 73, 88);
+    color: blanchedalmond;
+    border-color:rgb(131, 55, 67); 
+}
+.btn-primary:hover{
+    background-color: rgb(124, 47, 60);
+    color: blanchedalmond;
+    border-color:rgb(87, 27, 36); 
+    
+}
+.btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+    background-color: rgb(124, 47, 60);
+    color: blanchedalmond;
+    border-color:rgb(87, 27, 36); 
+}
+.btn-outline-primary{
+    background-color: rgb(155, 115, 119);
+    color: blanchedalmond;
+    border-color:rgb(131, 55, 67) ;
+    }
+    .btn-outline-primary:hover{
+        background-color: rgb(124, 47, 60);
+        color: blanchedalmond;
+        border-color:rgb(87, 27, 36); 
+    }
+    .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+        background-color: rgb(124, 47, 60);
+        color: blanchedalmond;
+        border-color:rgb(87, 27, 36); 
+    }
 
-h1,
-h2,
-h3 {
+h1,h2,h3 {
     font-family: 'Be Vietnam Pro';
     text-align: center;
     font-weight: 900;
@@ -39,59 +69,6 @@ a {
     text-decoration: none;
 }
 
-.menu-nav {
-    background-color: rgb(78, 7, 61);
-    padding: 20px;
-    text-align: right;
-
-    border: 2px rgb(26, 1, 49) solid;
-}
-
-.menu-nav ul {
-    list-style-type: none;
-    display: inline;
-}
-
-.menu-nav ul li {
-    display: inline;
-    padding: 20px;
-}
-
-.menu-nav ul li a {
-    color: rgb(205, 183, 205);
-    text-decoration: none;
-    text-transform: uppercase;
-
-}
-
-.bienvenidos {
-    display: inline-block;
-    width: 100%;
-}
-
-.contenedorBienvenidxs {
-
-    display: inline-block;
-    width: 40%;
-    padding: 50px;
-    position: relative;
-    bottom: 50px;
-}
-
-.bienvenidos img {
-    display: inline-block;
-    width: 30%;
-    object-fit: cover;
-    border-radius: 90%;
-    padding: 40px;
-}
-
-.contenedorValores,
-.items-palabras {
-    padding: 30px 100px;
-    margin: 50px;
-    border: 5px;
-}
 
 
 
@@ -142,7 +119,6 @@ a {
 }
 
 .entrada-tres iframe {
-    /*justify-content: center;*/
     display: inline-block;
     width: 15%;
     object-fit: cover;
@@ -409,3 +385,64 @@ footer {
     width: 50%;
 
 }
+
+/* 
+
+
+
+
+.menu-nav {
+    background-color: rgb(78, 7, 61);
+    padding: 20px;
+    text-align: right;
+
+    border: 2px rgb(26, 1, 49) solid;
+}
+
+.menu-nav ul {
+    list-style-type: none;
+    display: inline;
+}
+
+.menu-nav ul li {
+    display: inline;
+    padding: 20px;
+}
+
+.menu-nav ul li a {
+    color: rgb(205, 183, 205);
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+.bienvenidos {
+    display: inline-block;
+    width: 100%;
+}
+
+.contenedorBienvenidxs {
+
+    display: inline-block;
+    width: 40%;
+    padding: 50px;
+    position: relative;
+    bottom: 50px;
+}
+
+.bienvenidos img {
+    display: inline-block;
+    width: 30%;
+    object-fit: cover;
+    border-radius: 90%;
+    padding: 40px;
+}
+
+.contenedorValores,
+.items-palabras {
+    padding: 30px 100px;
+    margin: 50px;
+    border: 5px;
+}
+
+/*
