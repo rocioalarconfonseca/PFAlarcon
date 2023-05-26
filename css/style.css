@@ -1,48 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
-*{
+
+* {
     margin: 0;
     padding: 0;
     font-family: "Be Vietnam Pro", sans-serif;
 }
-body {
-    background-color: rgba(252, 217, 237, 0.891);
-}
-.row{
-    margin:0;
-}
-.btn-primary{
-    background-color: rgb(163, 73, 88);
-    color: blanchedalmond;
-    border-color:rgb(131, 55, 67); 
-}
-.btn-primary:hover{
-    background-color: rgb(124, 47, 60);
-    color: blanchedalmond;
-    border-color:rgb(87, 27, 36); 
-    
-}
-.btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
-    background-color: rgb(124, 47, 60);
-    color: blanchedalmond;
-    border-color:rgb(87, 27, 36); 
-}
-.btn-outline-primary{
-    background-color: rgb(155, 115, 119);
-    color: blanchedalmond;
-    border-color:rgb(131, 55, 67) ;
-    }
-    .btn-outline-primary:hover{
-        background-color: rgb(124, 47, 60);
-        color: blanchedalmond;
-        border-color:rgb(87, 27, 36); 
-    }
-    .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
-        background-color: rgb(124, 47, 60);
-        color: blanchedalmond;
-        border-color:rgb(87, 27, 36); 
-    }
 
-h1,h2,h3 {
+body {
+    background-color: rgba(255, 228, 228, 0.902);
+
+}
+
+.row {
+    margin: 0;
+}
+
+main {
+    margin-bottom: 10%;
+}
+
+footer {
+    margin-top: 10%;
+    padding-top: 5%;
+}
+
+h1,
+h2,
+h3 {
     font-family: 'Be Vietnam Pro';
     text-align: center;
     font-weight: 900;
@@ -50,16 +34,15 @@ h1,h2,h3 {
 
 h2 {
     color: rgb(169, 85, 99);
-    font-size: 24 px;
+    font-size: 20 px;
 }
 
 h3 {
     color: rgb(115, 47, 58);
-    font-size: 22 px;
+    font-size: 18 px;
 }
 
 p {
-    color: rgb(44, 24, 44);
     font-family: 'Be Vietnam Pro';
     font-size: 18px;
     text-align: justify;
@@ -67,195 +50,120 @@ p {
 
 a {
     text-decoration: none;
-}
-
-
-
-
-.entrada-uno,
-.entrada-dos,
-.entrada-tres {
-    display: inline-block;
-    width: 100%;
 
 }
 
-.contenedor-entrada-uno img {
-    display: inline-block;
-    width: 45%;
-    object-fit: cover;
-    padding: 20px 50px;
-    bottom: 50px;
-
-}
-
-.contenedor-entrada-uno p,
-.contenedor-entrada-dos p {
-    display: inline-block;
-    width: 35%;
-    padding: 50px;
-    position: relative;
-    bottom: 50px;
-
-}
-
-.resumen-camino p,
-.resumen-exito p {
-    display: inline-block;
-    padding: 20px 50px;
-    width: 90%;
-    position: relative;
-    bottom: 50px;
-    text-align: justify;
-}
-
-.contenedor-entrada-dos img {
-    display: inline-block;
-    width: 45%;
-    object-fit: cover;
-    padding: 30px 50px;
-    bottom: 50px;
-
-}
-
-.entrada-tres iframe {
-    display: inline-block;
-    width: 15%;
-    object-fit: cover;
-    padding: 20px;
-    text-align: center;
-    margin-left: 60px;
-}
-
+.bienvenido,
 .tips,
 .blog,
 .contacto,
-.marca,
-.recetario{
-    color: rgba(39, 4, 27, 0.934);
-    font-size: 20px;
-    margin: 30px;
-    padding: 20px;
+.recetario {
+    color: rgba(62, 8, 41, 0.611);
+    margin-top: 40px;
+    padding: 3%;
+    font-size: 22 px;
+}
 
+.itemsInicio1,
+.itemsInicio2,
+.itemsInicio3,
+.itemsInicio4 {
+    display: flex;
+    justify-items: flex-start;
+}
 
+.itemsInicio1::before {
+    content: "01";
+    background-color: rgb(247, 203, 192);
+    border-radius: 30px;
+    margin: 0 20px 0 0;
+    padding: 5px 25px 5px 25px;
+    color: white;
+}
+ .itemsInicio2::before {
+    content: "02";
+    background-color: rgb(247, 203, 192);
+    border-radius: 30px;
+    margin: 0 20px 0 0;
+    padding: 5px 25px 5px 25px;
+    color: white;
+}
 
+.itemsInicio3::before {
+    content: "03";
+    background-color: rgb(247, 203, 192);
+    border-radius: 30px;
+    margin: 0 20px 0 0;
+    padding: 5px 25px 5px 25px;
+    color: white;
+}
+
+.itemsInicio4::before {
+    content: "04";
+    background-color: rgb(247, 203, 192);
+    border-radius: 30px;
+    margin: 0 20px 0 0;
+    padding: 5px 25px 5px 25px;
+    color: white;
+}
+
+.items {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 
 }
 
-.mindful-h2,
-.amorpropio-h2,
-.adios-h2,
-.bienvenido-h2,
-.valores-h2,
-.relax-h2,
-.camino-h2,
-.exito-h2,
-.form-h2,
-.palabras-h2,
-.entradah2,
-.galletas-h2,
-.budin-h2 {
-    margin: 35px;
-    padding: 50px;
-    border: 1px rosybrown solid;
-    background-color: rgb(208, 173, 215);
-}
-
-.contenedor-Mindful,
-.contenedor-Mindful-items {
-    display: inline-block;
-    width: 40%;
-    padding: 50px;
-    position: relative;
-    bottom: 50px;
-    text-align: center;
-}
-
-.contenedor-Mindful-resumen {
-    display: inline-block;
-    padding: 50px;
-    width: 90%;
-    position: relative;
-    bottom: 50px;
-    text-align: center;
-}
-
-.contenedor-Mindful img {
-    display: inline-block;
-    width: 50%;
-    object-fit: cover;
-    padding: 30px;
-}
-
-.contenedor-amorpropio-intro,
-.contenedor-items-amorpropio {
-    display: inline-block;
-    width: 35%;
-    padding: 50px;
-    position: relative;
-    bottom: 50px;
-    text-align: center;
-}
-
-.contenedor-amorpropio-intro img {
-    display: inline-block;
-    width: 50%;
-    object-fit: cover;
-    padding: 30px;
+.btn-primary {
+    background-color: rgb(163, 73, 88);
+    color: blanchedalmond;
+    border-color: rgb(131, 55, 67);
 
 }
 
-.contenedor-adios-balanza img {
-    width: 100%;
-    object-fit: cover;
-    padding: 30px;
+.btn-primary:hover {
+    background-color: rgb(124, 47, 60);
+    color: blanchedalmond;
+    border-color: rgb(87, 27, 36);
+    transform: scale(1.1);
+    text-decoration: underline;
+    cursor: pointer;
+
 }
 
-.contenedor-adios-balanza,
-.contenedor-items-balanza {
-    display: inline-block;
-    width: 35%;
-    padding: 50px;
-    position: relative;
-    bottom: 50px;
-    text-align: center;
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    background-color: rgb(124, 47, 60);
+    color: blanchedalmond;
+    border-color: rgb(87, 27, 36);
 }
 
-.contenedor-resumen-balanza {
-    display: inline-block;
-    padding: 50px;
-    width: 90%;
-    position: relative;
-    bottom: 50px;
-    text-align: center;
+.btn-outline-primary {
+    background-color: rgb(155, 115, 119);
+    color: blanchedalmond;
+    border-color: rgb(131, 55, 67);
 }
 
-.contenedor-entrada-tres p {
-    padding: 30px 100px;
-    margin: 50px;
-    border: 5px;
+.btn-outline-primary:hover {
+    background-color: rgb(124, 47, 60);
+    color: blanchedalmond;
+    border-color: rgb(87, 27, 36);
+    transform: scale(1.1);
+    text-decoration: underline;
+    cursor: pointer;
 }
 
-.formularioContacto {
-    display: inline-block;
-}
-
-.invitacion {
-    display: inline-block;
-    padding: 50px;
-    width: 35%;
-    position: relative;
-    bottom: 400px;
-    text-align: justify;
-}
-
-.formulario {
-    display: inline-block;
-    padding: 50px;
-    width: 35%;
-    position: relative;
-    bottom: 50px;
-    text-align: justify;
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+    background-color: rgb(124, 47, 60);
+    color: blanchedalmond;
+    border-color: rgb(87, 27, 36);
 }
 
 .campos {
@@ -287,162 +195,10 @@ a {
 
 }
 
-.contenedorImagen {
-    display: inline-block;
-    padding: 12px;
-    width: 35%;
-    position: relative;
-    bottom: 450px
-}
-
-.contenedorImagen img {
-    width: 100%;
-    object-fit: cover;
-    padding: 30px;
-}
-
-.contenedorInvitacion p {
-    padding: 20px 50px;
-    width: 90%;
-    position: relative;
-    bottom: 500px;
+ul li {
+    list-style: none;
+    color: rgb(44, 24, 44);
+    font-family: 'Be Vietnam Pro';
+    font-size: 18px;
     text-align: justify;
 }
-
-
-footer {
-    background-color: rgb(78, 7, 61);
-    width: 100%;
-    padding: 0 50px;
-    display: inline-block;
-    text-align: center;
-    
-}
-.footer-h2 {
-    color: rgba(214, 134, 134, 0.349);
-    margin-bottom: 20px;
-}
-
-.footer-2{
-    display: inline-block;
-    width: 30%;
-    text-align: left;
-}
-
-.redesSociales{
-    display: inline-block;
-    width: 100%;
-    text-align: justify;
-  }
-.redesSociales i{
-    font-size:50px ;
-    
-}
-.footer2 nav ul {
-    list-style-type: none;
-  
-}
-
-.footer2 nav ul li {
-    display: inline-block;
-    padding: 20px;
-
-}
-
-.footer2 nav ul li a {
-    color: rgb(205, 183, 205);
-
-}
-
-.copy-r-m p {
-    width: 90%;
-    margin-top: 80px;
-    color: rgb(255, 255, 255);
-    text-align: right;
-}
-
-
-.contenedor-items-galletas,.contenedor-items-budin,.contenedorbudiningredientespizza{
-
-    display: inline-block;
-    width: 35%;
-    padding: 50px;
-    position: relative;
-    bottom: 50px;
-
-}
-.contenedor-items-galletas,.contenedor-items-budin,.contenedorbudiningredientespizza h3{
-    margin: 15px;
-    font-size: 24px;
-}
-
-.contenedor-pizza img, .contenedor-galletas-intro img,.contenedor-budin img{
-
-    width: 100%;
-    object-fit: cover;
-    padding: 30px;
-    display: inline-block;
-    width: 50%;
-
-}
-
-/* 
-
-
-
-
-.menu-nav {
-    background-color: rgb(78, 7, 61);
-    padding: 20px;
-    text-align: right;
-
-    border: 2px rgb(26, 1, 49) solid;
-}
-
-.menu-nav ul {
-    list-style-type: none;
-    display: inline;
-}
-
-.menu-nav ul li {
-    display: inline;
-    padding: 20px;
-}
-
-.menu-nav ul li a {
-    color: rgb(205, 183, 205);
-    text-decoration: none;
-    text-transform: uppercase;
-
-}
-
-.bienvenidos {
-    display: inline-block;
-    width: 100%;
-}
-
-.contenedorBienvenidxs {
-
-    display: inline-block;
-    width: 40%;
-    padding: 50px;
-    position: relative;
-    bottom: 50px;
-}
-
-.bienvenidos img {
-    display: inline-block;
-    width: 30%;
-    object-fit: cover;
-    border-radius: 90%;
-    padding: 40px;
-}
-
-.contenedorValores,
-.items-palabras {
-    padding: 30px 100px;
-    margin: 50px;
-    border: 5px;
-}
-
-/*
