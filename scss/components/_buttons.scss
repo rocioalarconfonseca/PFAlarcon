@@ -1,0 +1,47 @@
+.btn-primary {
+  background-color: rgb(163, 73, 88);
+  color: blanchedalmond;
+  border-color: rgb(131, 55, 67);
+
+  &:hover {
+    background-color: rgb(124, 47, 60);
+    color: blanchedalmond;
+    border-color: rgb(87, 27, 36);
+    transform: scale(1.1);
+    transition: $transition;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .btn.show,
+  .btn:first-child:active,
+  :not(.btn-check)+.btn:active {
+    background-color: rgb(124, 47, 60);
+    color: blanchedalmond;
+    border-color: rgb(87, 27, 36);
+  }
+}
+
+.btn-outline-primary {
+  background-color: rgb(155, 115, 119);
+  color: blanchedalmond;
+  border-color: rgb(131, 55, 67);
+
+  &:hover {
+    background-color: rgb(124, 47, 60);
+    color: blanchedalmond;
+    border-color: rgb(87, 27, 36);
+    transform: scale(1.1);
+    transition: $transition;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .btn.show,
+  .btn:first-child:active,
+  :not(.btn-check)+.btn:active {
+    background-color: rgb(124, 47, 60);
+    color: blanchedalmond;
+    border-color: rgb(87, 27, 36);
+  }
+}

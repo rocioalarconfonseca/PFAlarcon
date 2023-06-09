@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: $main-font;
+}
+
+body {
+    background-color: $main-color;
+    background-image: $background-image;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    @if $main-color ==rgba(255, 228, 228, 0.902) {
+        color: rgb(19, 2, 19);
+    }
+    @else if $main-color ==rgba(255, 254, 255, 0.902) {
+        background-image: url('/images/Iniciales-removebg-preview.png');
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    main {
+        margin-bottom: 50%;
+        margin: 2%;
+
+        .bienvenido,
+        .tips,
+        .blog,
+        .contactame,
+        .recetario {
+            margin-top: 40px;
+            padding: 3%;
+            @if $main-color ==rgba(255, 228, 228, 0.902) {
+                color: $titulos1-color
+            }
+            @else if $main-color ==rgba(65, 20, 65, 0.902) {
+                color: #efd3ea;
+            }
+        }
+         
+        p {
+
+            color: $parrafo-color;
+            font-size: 18px;
+            text-align: justify;
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+            font-weight: 900;
+        }
+
+
+        h2 {
+            color: $titulos2-color ;
+            font-size: 20 px;
+        }
+
+        h3 {
+            color: $titulos3-color;
+            font-size: 18 px;
+        }
+    }
+
+    ul {
+        li {
+            list-style: none;
+            color: $titulosLi-color;
+            font-size: 18px;
+            text-align: justify;
+            &:hover {
+                color: blanchedalmond;
+                border-color: rgb(87, 27, 36);
+                transform: scale(1.1);
+                transition: $transition;
+                cursor: pointer;
+            }
+        }
+    }
+}

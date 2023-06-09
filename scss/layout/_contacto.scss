@@ -1,0 +1,82 @@
+.grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2, 300px;
+    grid-gap: 20px;
+    grid-template-areas:
+        "contacto formulario"
+        "foto descripcion";
+    margin-top: 15px;
+    align-items: center;
+    justify-items: center;
+    place-items: center;
+
+    &_hijo {
+        color: rgba(44, 1, 52, 0.981);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contacto {
+        grid-area: contacto;
+        background-color: rgba(255, 200, 228, 0.692);
+        padding: 10px;
+
+    }
+
+
+    .formulario {
+        grid-area: formulario;
+        padding: 10px;
+
+        .campos {
+            margin-bottom: 10px;
+        }
+
+        label {
+            color: blanco;
+            font-size: 18px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 4px;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .botones {
+            margin-top: 10px;
+            text-align: right;
+        }
+
+    }
+
+    .foto {
+        grid-area: foto;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .descripcion {
+        grid-area: descripcion;
+        background-color: rgba(255, 192, 203, 0.344);
+
+        p {
+            font-size: 20px;
+            max-width: 100%;
+            justify-content: center;
+            margin-right: 20px;
+
+        }
+
+    }
+}
