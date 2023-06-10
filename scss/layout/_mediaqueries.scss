@@ -1,0 +1,25 @@
+@media screen and (max-width: 767px) {
+    .grilla {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "contacto"
+      "formulario"
+      "foto"
+      "descripcion";
+  }
+
+  .formulario {
+    .campos {
+      margin-bottom: 10px;
+    }
+  }
+
+  .foto {
+    img {
+      width: 100%;
+
+    }
+  }
+
+}

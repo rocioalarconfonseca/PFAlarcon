@@ -1,5 +1,5 @@
 .grilla {
-    display: grid;
+    @include flexbox(grid, center);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2, 300px;
     grid-gap: 20px;
@@ -7,23 +7,29 @@
         "contacto formulario"
         "foto descripcion";
     margin-top: 15px;
-    align-items: center;
     justify-items: center;
     place-items: center;
 
+
     &_hijo {
-        color: rgba(44, 1, 52, 0.981);
-        width: 100%;
-        height: 100%;
+        @include tamanio(100%, 100%, cover);
         display: flex;
         justify-content: center;
         align-items: center;
+        @extend .animacion;
+
     }
 
     .contacto {
         grid-area: contacto;
-        background-color: rgba(255, 200, 228, 0.692);
+        @extend .gradiente;
+        background-size: cover;
         padding: 10px;
+
+        p {
+            color: rgb(68, 7, 53);
+
+        }
 
     }
 
@@ -34,20 +40,30 @@
 
         .campos {
             margin-bottom: 10px;
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 4px;
+                border-color: $main-color;
+                border-radius: 20px;
+
+                &:focus {
+                    transition: $transition;
+                    transform: scale(1.5, 2);
+
+                }
+            }
+
         }
 
         label {
             color: blanco;
             font-size: 18px;
+            color: $titulos2-color;
         }
 
-        input,
-        textarea {
-            width: 100%;
-            padding: 4px;
-            border: none;
-            border-radius: 20px;
-        }
+
 
         .botones {
             margin-top: 10px;
@@ -60,23 +76,52 @@
         grid-area: foto;
 
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            @include tamanio(100%, 100%, cover);
+            border-radius: 10%;
+            border-style: double;
+            border-color: rgb(112, 21, 103);
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition: 5s;
+
+
+            &:hover {
+                @extend .gradiente;
+
+
+            }
         }
     }
 
     .descripcion {
         grid-area: descripcion;
-        background-color: rgba(255, 192, 203, 0.344);
+        @extend .gradiente;
 
         p {
             font-size: 20px;
             max-width: 100%;
             justify-content: center;
             margin-right: 20px;
+            color: rgb(68, 7, 53);
+            @extend .animacion;
+
 
         }
 
     }
+
+}
+
+@keyframes animacion {
+    0% {
+
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
 }

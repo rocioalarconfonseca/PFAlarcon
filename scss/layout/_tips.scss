@@ -1,0 +1,8 @@
+p {
+    &:focus {
+        transition: $transition;
+        transform: scale3d(1, 3);
+        color: $titulos2-color;
+
+    }
+}

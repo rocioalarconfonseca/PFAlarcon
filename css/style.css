@@ -7,7 +7,7 @@
 
 body {
   background-color: rgba(255, 228, 228, 0.902);
-  background-image: url("/images/Icono RA.jpg");
+  background-image: url("/images/fondo degrade.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -27,10 +27,11 @@ body main .contactame,
 body main .recetario {
   margin-top: 40px;
   padding: 3%;
-  color: rgba(62, 8, 41, 0.611);
+  color: rgba(82, 17, 57, 0.611);
 }
 body main p {
-  color: rgb(19, 2, 19);
+  color: rgb(42, 19, 61);
+  background-color: rgba(255, 192, 248, 0.117);
   font-size: 18px;
   text-align: justify;
 }
@@ -39,20 +40,21 @@ body main h2,
 body main h3 {
   text-align: center;
   font-weight: 900;
+  animation: slide-fade 3s linear;
 }
 body main h2 {
-  color: rgb(169, 85, 99);
+  color: rgb(184, 44, 161);
   font-size: 20 px;
 }
 body main h3 {
-  color: rgb(115, 47, 58);
+  color: rgb(110, 47, 115);
   font-size: 18 px;
 }
 body ul li {
   list-style: none;
   color: rgb(44, 24, 44);
   font-size: 18px;
-  text-align: justify;
+  justify-self: flex-start;
 }
 body ul li:hover {
   color: blanchedalmond;
@@ -60,6 +62,36 @@ body ul li:hover {
   transform: scale(1.1);
   transition: 2s;
   cursor: pointer;
+}
+
+@keyframes slide-fade {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.d-flex, .items {
+  display: flex;
+  flex-direction: row;
+}
+
+.animacion, .grilla .descripcion p, .grilla_hijo {
+  animation-name: animacion;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  transform: translateX(0);
+}
+
+.gradiente, .grilla .descripcion, .grilla .foto img:hover, .grilla .contacto {
+  background-image: linear-gradient(to left, rgba(234, 200, 218, 0.743), rgb(172, 241, 241));
+  height: 100%;
+  width: 100%;
 }
 
 footer {
@@ -115,16 +147,12 @@ footer .container .row {
 }
 
 .items {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 10px;
-  align-items: center;
   justify-content: center;
 }
 .itemsInicio1, .itemsInicio2, .itemsInicio3, .itemsInicio4 {
   display: flex;
-  justify-items: flex-start;
+  align-items: flex-start;
 }
 .itemsInicio1::before, .itemsInicio2::before, .itemsInicio3::before, .itemsInicio4::before {
   background-color: rgb(247, 203, 192);
@@ -146,35 +174,63 @@ footer .container .row {
   content: "04";
 }
 
+img {
+  animation-name: animacion;
+  animation-iteration-count: 1;
+  animation-timing-function: initial;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  transform: translateX(0);
+}
+
+@keyframes animacion {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 10;
+  }
+}
+p:focus {
+  transition: 2s;
+  transform: scale3d(1, 3);
+  color: rgb(184, 44, 161);
+}
+
 .parrafoFinalRecetario {
-  margin-top: 30px;
+  margin-top: 80px;
   background-color: rgba(234, 200, 218, 0.743);
   text-decoration: underline rgb(85, 12, 24);
 }
 
 .grilla {
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 2, 300px;
   grid-gap: 20px;
   grid-template-areas: "contacto formulario" "foto descripcion";
   margin-top: 15px;
-  align-items: center;
   justify-items: center;
   place-items: center;
 }
 .grilla_hijo {
-  color: rgba(44, 1, 52, 0.981);
   width: 100%;
   height: 100%;
+  object-fit: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .grilla .contacto {
   grid-area: contacto;
-  background-color: rgba(255, 200, 228, 0.692);
+  background-size: cover;
   padding: 10px;
+}
+.grilla .contacto p {
+  color: rgb(68, 7, 53);
 }
 .grilla .formulario {
   grid-area: formulario;
@@ -183,16 +239,22 @@ footer .container .row {
 .grilla .formulario .campos {
   margin-bottom: 10px;
 }
+.grilla .formulario .campos input,
+.grilla .formulario .campos textarea {
+  width: 100%;
+  padding: 4px;
+  border-color: rgba(255, 228, 228, 0.902);
+  border-radius: 20px;
+}
+.grilla .formulario .campos input:focus,
+.grilla .formulario .campos textarea:focus {
+  transition: 2s;
+  transform: scale(1.5, 2);
+}
 .grilla .formulario label {
   color: blanco;
   font-size: 18px;
-}
-.grilla .formulario input,
-.grilla .formulario textarea {
-  width: 100%;
-  padding: 4px;
-  border: none;
-  border-radius: 20px;
+  color: rgb(184, 44, 161);
 }
 .grilla .formulario .botones {
   margin-top: 10px;
@@ -205,16 +267,46 @@ footer .container .row {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10%;
+  border-style: double;
+  border-color: rgb(112, 21, 103);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: 5s;
 }
 .grilla .descripcion {
   grid-area: descripcion;
-  background-color: rgba(255, 192, 203, 0.344);
 }
 .grilla .descripcion p {
   font-size: 20px;
   max-width: 100%;
   justify-content: center;
   margin-right: 20px;
+  color: rgb(68, 7, 53);
+}
+
+@keyframes animacion {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .grilla {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "contacto" "formulario" "foto" "descripcion";
+  }
+  .formulario .campos {
+    margin-bottom: 10px;
+  }
+  .foto img {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

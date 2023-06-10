@@ -1,14 +1,13 @@
-//IMPORT LAYOUT BASE SIEMPRE PRIMERO
-@import 'base/variables';
-@import 'base/resets';
-// IMPORT COMPONENTS
-@import 'components/footer';
-@import 'components/buttons';
-//IMPORT LAYOUT
-@import 'layout/index';
-@import 'layout/blog';
-@import 'layout/tips';
-@import 'layout/recetario';
-@import 'layout/contacto';
+ @import 'base/variables';
+ @import 'base/resets';
+ @import 'base/utilidades';
 
+ @import 'components/footer';
+ @import 'components/buttons';
 
+ @import 'layout/index';
+ @import 'layout/blog';
+ @import 'layout/tips';
+ @import 'layout/recetario';
+ @import 'layout/contacto';
+ @import 'layout/mediaqueries';

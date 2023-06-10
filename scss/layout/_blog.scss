@@ -1,0 +1,22 @@
+img {
+    animation-name: animacion;
+    animation-iteration-count: 1;
+    animation-timing-function: initial;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    transform: translateX(0);
+}
+
+@keyframes animacion {
+    0% {
+
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 10;
+    }
+
+}

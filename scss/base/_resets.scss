@@ -12,15 +12,18 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+
     @if $main-color ==rgba(255, 228, 228, 0.902) {
         color: rgb(19, 2, 19);
     }
+
     @else if $main-color ==rgba(255, 254, 255, 0.902) {
         background-image: url('/images/Iniciales-removebg-preview.png');
         background-attachment: scroll;
         background-repeat: no-repeat;
         background-size: contain;
     }
+
     a {
         text-decoration: none;
     }
@@ -36,19 +39,24 @@ body {
         .recetario {
             margin-top: 40px;
             padding: 3%;
+
             @if $main-color ==rgba(255, 228, 228, 0.902) {
                 color: $titulos1-color
             }
+
             @else if $main-color ==rgba(65, 20, 65, 0.902) {
                 color: #efd3ea;
             }
-        }
-         
-        p {
 
+
+        }
+
+        p {
             color: $parrafo-color;
+            background-color: rgba(255, 192, 248, 0.117);
             font-size: 18px;
             text-align: justify;
+
         }
 
         h1,
@@ -56,6 +64,7 @@ body {
         h3 {
             text-align: center;
             font-weight: 900;
+            animation: slide-fade 3s linear;
         }
 
 
@@ -75,7 +84,9 @@ body {
             list-style: none;
             color: $titulosLi-color;
             font-size: 18px;
-            text-align: justify;
+            justify-self: flex-start;
+            
+
             &:hover {
                 color: blanchedalmond;
                 border-color: rgb(87, 27, 36);
@@ -85,4 +96,18 @@ body {
             }
         }
     }
+}
+
+@keyframes slide-fade {
+    0% {
+
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
 }
